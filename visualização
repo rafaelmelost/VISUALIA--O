@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+anos = ['2012', '2013', '2014', '2015', '2016', '2017']
+regioes = ['n', 'ne', 'se', 's', 'co']
+n = [37.25, 35.86, 36.44, 39.78, 44.55, 47.43]
+ne = [39.31, 39.72, 41.91, 41.07, 43.68, 48.58]
+se = [21.54, 20.70, 21.42, 19.21, 19.47, 19.40]
+s = [24.13, 21.00, 22.78, 23.39, 24.76, 24.09]
+co = [38.16, 37.35, 38.03, 36.11, 36.06, 33.21]
+
+plt.figure(figsize=(10, 6))
+plt.plot(anos, n, marker='o', color='blue', label='Norte')
+plt.plot(anos, ne, marker='o', color='red', label='Nordeste')
+plt.plot(anos, se, marker='o', color='orange', label='Sudeste')
+plt.plot(anos, s, marker='o', color='green', label='Sul')
+plt.plot(anos, co, marker='o', color='black', label='Centro-Oeste')
+plt.ylim(15, 55)
+plt.ylabel('Taxa por 100 mil habitantes')
+plt.xlabel('Anos')
+plt.title('Taxa de Homicídios por Armas de Fogo')
+plt.legend()
+plt.show()
